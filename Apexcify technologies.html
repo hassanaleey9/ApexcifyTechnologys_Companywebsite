@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apexcify Technologys — Web Development & Services</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Apexcify Technologys — Web development, UI/UX, branding, and custom software solutions." />
+  <style>
+    :root{
+      --bg:#0f1724; /* very dark */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4; /* teal */
+      --accent-2:#8b5cf6; /* violet */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg,var(--bg) 0%, #071023 100%); color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.5; font-size:16px; padding:32px 20px;
+      display:flex; justify-content:center;
+    }
+    .wrap{width:100%; max-width:var(--maxw);}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px;
+    }
+    .brand{display:flex; align-items:center; gap:14px; text-decoration:none; color:inherit}
+    .logo{
+      width:56px; height:56px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),var(--accent-2)); font-weight:700; color:#031026; box-shadow:0 6px 20px rgba(139,92,246,0.12);
+    }
+    nav a{margin-left:18px; text-decoration:none; color:var(--muted); font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    main{display:grid; grid-template-columns:1fr; gap:28px}
+
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:28px; border-radius:var(--radius); display:flex; gap:22px; align-items:center}
+    .hero-left{flex:1}
+    h1{margin:0; font-size:28px; letter-spacing:-0.3px}
+    p.lead{color:var(--muted); margin-top:10px; max-width:72ch}
+    .cta{margin-top:18px; display:flex; gap:12px}
+    .btn{padding:10px 16px; border-radius:12px; font-weight:600; border:0; cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#021226; box-shadow:0 10px 30px rgba(6,182,212,0.12)}
+    .btn-ghost{background:transparent; color:var(--accent); border:1px solid rgba(255,255,255,0.04)}
+
+    .hero-right{width:360px; min-width:240px}
+    .card{background:var(--card); padding:16px; border-radius:12px}
+    .kpi{display:flex; gap:12px}
+    .kpi .item{flex:1; text-align:center}
+    .kpi strong{display:block; font-size:18px}
+    
+    section h2{margin:0 0 12px 0}
+    .grid{display:grid; gap:16px}
+
+    /* Services */
+    .services{grid-template-columns:repeat(auto-fit, minmax(220px,1fr))}
+    .service{padding:18px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02)}
+    .service h3{margin:8px 0 6px}
+    .pill{display:inline-block; padding:6px 8px; border-radius:999px; font-size:12px; color:var(--muted); background:var(--glass)}
+
+    /* Projects */
+    .projects{grid-template-columns:repeat(auto-fit, minmax(230px,1fr))}
+    .project{border-radius:12px; overflow:hidden; background:#06101a; border:1px solid rgba(255,255,255,0.03)}
+    .project .meta{padding:12px}
+    .project img{width:100%; height:140px; object-fit:cover; display:block}
+
+    /* Contact */
+    .contact{display:grid; grid-template-columns:1fr 360px; gap:18px}
+    form{background:var(--card); padding:18px; border-radius:12px}
+    label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px}
+    input,textarea{width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.03); background:transparent; color:inherit}
+    textarea{min-height:140px; resize:vertical}
+
+    footer{margin-top:22px; padding:18px; text-align:center; color:var(--muted); font-size:14px}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .contact{grid-template-columns:1fr}
+      .hero{flex-direction:column}
+      .hero-right{width:100%}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">AT</div>
+        <div>
+          <div style="font-weight:700">Apexcify Technologys</div>
+          <div style="font-size:13px;color:var(--muted)">Web • UI/UX • Branding</div>
+        </div>
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h1>Beautiful web experiences — built for growth.</h1>
+          <p class="lead">We design and build high-quality websites, web apps and brand experiences that help businesses stand out. Fast, modern, and easy to maintain.</p>
+          <div class="cta">
+            <button class="btn btn-primary" id="hireBtn">Get a free quote</button>
+            <a class="btn btn-ghost" href="#projects">See projects</a>
+          </div>
+          <div style="margin-top:14px; color:var(--muted); font-size:13px">
+            Email: <a href="mailto:apexcifytechnologys@gmail.com" style="color:var(--accent)">apexcifytechnologys@gmail.com</a>
+            &nbsp;•&nbsp; LinkedIn: <span style="color:var(--accent)">Apexcify Technologys</span>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px">
+              <div style="font-weight:700">Quick stats</div>
+              <div style="font-size:12px; color:var(--muted)">Trusted by startups & creators</div>
+            </div>
+            <div class="kpi">
+              <div class="item"><strong>24</strong><span style="color:var(--muted)">Projects</span></div>
+              <div class="item"><strong>8</strong><span style="color:var(--muted)">Services</span></div>
+              <div class="item"><strong>100%</strong><span style="color:var(--muted)">Satisfaction</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <h2>Services</h2>
+        <div class="grid services" style="margin-top:12px">
+          <div class="service">
+            <div class="pill">Web Development</div>
+            <h3>Responsive Websites</h3>
+            <p style="color:var(--muted)">Performance-first HTML/CSS/JS, CMS integrations and fast deployment.</p>
+          </div>
+          <div class="service">
+            <div class="pill">UI / UX</div>
+            <h3>Design Systems</h3>
+            <p style="color:var(--muted)">User-centered interfaces, prototypes, and design handoff for developers.</p>
+          </div>
+          <div class="service">
+            <div class="pill">Branding</div>
+            <h3>Visual Identity</h3>
+            <p style="color:var(--muted)">Logo, color systems, and brand guidelines for a consistent presence.</p>
+          </div>
+          <div class="service">
+            <div class="pill">E‑commerce</div>
+            <h3>Online Stores</h3>
+            <p style="color:var(--muted)">Shopify, WooCommerce and custom storefronts optimized for conversions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 style="margin-top:6px">Projects</h2>
+        <div class="grid projects" style="margin-top:12px">
+          <!-- Example projects; replace screenshots as you like -->
+          <div class="project">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=example" alt="Project screenshot">
+            <div class="meta">
+              <strong>Shoplify</strong>
+              <div style="color:var(--muted); font-size:13px">E-commerce redesign — improved conversion by 32%.</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=example" alt="Project screenshot">
+            <div class="meta">
+              <strong>Creator Portal</strong>
+              <div style="color:var(--muted); font-size:13px">Member area & subscription management.</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="https://images.unsplash.com/photo-1523359346061-8f3b8cd9f9f6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=example" alt="Project screenshot">
+            <div class="meta">
+              <strong>Product Landing</strong>
+              <div style="color:var(--muted); font-size:13px">One‑page marketing site with analytics & A/B tests.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2 style="margin-top:6px">About</h2>
+        <div style="margin-top:10px; background:var(--card); padding:16px; border-radius:12px">
+          <p style="color:var(--muted)">Apexcify Technologys is a small studio building web products and digital experiences. We care about clarity, performance, and creating value for users. We don't publish phone numbers — contact us by email for inquiries and proposals.</p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 style="margin-top:6px">Contact</h2>
+        <div class="contact" style="margin-top:12px">
+          <form id="contactForm">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required>
+
+            <label for="email" style="margin-top:10px">Email</label>
+            <input id="email" name="email" placeholder="you@example.com" type="email" required>
+
+            <label for="message" style="margin-top:10px">Message</label>
+            <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+
+            <div style="display:flex; gap:10px; margin-top:12px">
+              <button class="btn btn-primary" type="submit">Send message</button>
+              <button class="btn" type="button" id="clearBtn">Clear</button>
+            </div>
+
+            <div id="formMsg" style="margin-top:10px; color:var(--muted); font-size:13px"></div>
+          </form>
+
+          <aside style="background:var(--card); padding:16px; border-radius:12px; height:100%">
+            <h3>Get in touch</h3>
+            <p style="color:var(--muted); font-size:14px">Email us at <a href="mailto:apexcifytechnologys@gmail.com" style="color:var(--accent)">apexcifytechnologys@gmail.com</a></p>
+
+            <div style="margin-top:12px">
+              <strong style="display:block">Services</strong>
+              <ul style="margin:8px 0 0 16px; color:var(--muted)">
+                <li>Custom websites</li>
+                <li>UX & prototypes</li>
+                <li>Brand identity</li>
+                <li>E‑commerce</li>
+              </ul>
+            </div>
+
+            <div style="margin-top:14px; color:var(--muted); font-size:13px">LinkedIn: Apexcify Technologys</div>
+          </aside>
+        </div>
+      </section>
+
+      <footer>
+        &copy; <span id="year"></span> Apexcify Technologys — All rights reserved.
+      </footer>
+
+    </main>
+  </div>
+
+  <script>
+    // Basic interactivity: form valid
